@@ -5,7 +5,7 @@ let circleArea = (Math.PI * Math.pow(radius, 2)).toFixed(2)
 console.log(circleArea)
 
 
-//Завдання 4.1
+//Завдання 4.2
 
 let length = 29.777
 let width = 71.95
@@ -13,7 +13,7 @@ let rectangularArea = (length * width).toFixed(2)
 console.log(rectangularArea)
 
 
-//Завдання 4.1
+//Завдання 4.3
 
 let cylinderRadius = 7
 let height = 15
