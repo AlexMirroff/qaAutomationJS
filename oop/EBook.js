@@ -1,26 +1,32 @@
 
-//const Book = require('./Book')
+import { Book } from "./Book.js"
 
-
-class EBook extends Book {
+export class EBook extends Book {
 
     constructor(name, author, year, fileFormat) {
         super(name, author, year)
-        this.fileFormat = fileFormat
+        this._fileFormat = fileFormat
+    }
+
+    set fileFormat(fileFormat) {
+        if (fileFormat === "PDF")
+            this._fileFormat = fileFormat
+        else
+            throw new Error("Only PDF format is allowed")
+    }
+
+    get fileFormat() {
+        return this._fileFormat
+    }
+
+    static createNewEBook(book, format) {
+        return new EBook(book.name, book.author, book.year, format)
     }
 
     printInfo() {
-        console.log(`${this.name} — ${this.author}, ${this.year} , ${this.fileFormat} `)
+        console.log(`${this.name} — ${this.author}, ${this.year} , format: ${this.fileFormat} `)
     }
 }
 
-
-
-
-
-let ebook1 = new EBook("Harry Potter", "J.K. Rowling", 2001, "PDF");
-
-
-ebook1.printInfo();
 
 
