@@ -9,7 +9,6 @@
 	"scripts": {
 		"prepare": "husky",
 		"eslint-check": "npx eslint",
-		"prettier-fix": "npx prettier --write"
-
+		"prettier-fix": "npx prettier --write ."
 	}
 }
