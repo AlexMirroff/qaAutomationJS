@@ -10,7 +10,9 @@ export default defineConfig([
 		languageOptions: { globals: globals.browser },
 		rules: {
 			'no-unused-vars': 'warn',
-			'no-undef': 'warn',
+			'no-undef': 'off',
+			'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+			'padding-line-between-statements': ['error', { blankLine: 'always', prev: 'block-like', next: 'block-like' }],
 		},
 	},
 ])
